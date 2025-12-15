@@ -20,12 +20,15 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-
+vim.opt.textwidth = 80
+vim.opt_local.colorcolumn = "80"
 -- Setup lazy.nvim
 require("lazy").setup({
+  vim.lsp.enable("jdtls"),
   spec = {
     -- import your plugins
     { import = "acek.plugins" },
+    { import = "acek.plugins.lsp" },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

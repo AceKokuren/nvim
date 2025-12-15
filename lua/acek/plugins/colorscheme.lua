@@ -7,7 +7,7 @@ local M = {
 function M.config()
     local everforest = require("everforest")
     everforest.setup({
-        background = medium,
+        background = "medium",
         transparent_background_level = 0,
 
     })
