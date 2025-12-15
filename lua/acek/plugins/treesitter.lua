@@ -38,6 +38,7 @@ return {
         "vimdoc",
         "c",
         "java",
+        "xml",
       },
 
       incremental_selection = {

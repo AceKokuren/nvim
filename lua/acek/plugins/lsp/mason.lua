@@ -24,6 +24,7 @@ return {
                 "cssls",
                 "emmet_ls",
                 "html",
+                "lemminx",
 
             }
         })
