@@ -67,9 +67,6 @@ return {
       end,
     })
 
-    -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = cmp_nvim_lsp.default_capabilities()
-
     vim.diagnostic.config({
 		signs = {
 			text = {
