@@ -1,6 +1,22 @@
 return {
 "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+
+  opts = {
+    focus = true,
+    auto_jump = true,
+    preview = {
+        type = "split",
+        relative = "win",
+        border = "rounded",
+        title = "Preview",
+        title_pos = "center",
+        position = "right",
+        size = 0.5
+    },
+    warn_no_results = false,
+    open_no_results = true,
+  }, -- for default options, refer to the configuration section for custom setup.
+
   cmd = "Trouble",
   keys = {
     {
