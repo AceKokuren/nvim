@@ -21,6 +21,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "jdtls",
+                "ts_ls",
                 "cssls",
                 "emmet_ls",
                 "html",
