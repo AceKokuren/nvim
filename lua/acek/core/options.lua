@@ -7,9 +7,11 @@ opt.background = "light"
 -- line numbers
 opt.relativenumber = true
 opt.number = true
+opt.numberwidth = 2
 
 -- Tabs & Indentation
 opt.tabstop = 4
+opt.softtabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
