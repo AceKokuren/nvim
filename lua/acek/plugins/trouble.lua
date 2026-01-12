@@ -2,6 +2,7 @@ return {
 "folke/trouble.nvim",
 
   opts = {
+    auto_preview = false,
     focus = true,
     auto_jump = true,
     preview = {

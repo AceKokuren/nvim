@@ -20,13 +20,13 @@ return {
         mason_lspconfig.setup({
             ensure_installed = {
                 "lua_ls",
+                "jsonls",
                 "jdtls",
                 "ts_ls",
                 "cssls",
                 "emmet_ls",
                 "html",
                 "lemminx",
-
             }
         })
     end,

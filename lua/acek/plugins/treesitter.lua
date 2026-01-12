@@ -2,10 +2,11 @@ return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPre", "BufNewFile" },
   build = ":TSUpdate",
+  lazy = false,
 
   config = function()
     -- import nvim-treesitter plugin
-    local treesitter = require("nvim-treesitter.configs")
+    local treesitter = require("nvim-treesitter")
 
     -- configure treesitter
     ---@diagnostic disable-next-line: missing-fields
@@ -17,7 +18,7 @@ return {
       indent = { enable = true },
 
       -- ensure these language parsers are installed
-      ensure_installed = {
+      treesitter.install({
         "json",
         "javascript",
         "yaml",
@@ -33,7 +34,7 @@ return {
         "vimdoc",
         "java",
         "xml",
-      },
+      }),
 
       incremental_selection = {
         enable = true,

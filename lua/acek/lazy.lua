@@ -24,7 +24,6 @@ vim.opt.textwidth = 80
 vim.opt_local.colorcolumn = "80"
 -- Setup lazy.nvim
 require("lazy").setup({
-  vim.lsp.enable("jdtls"),
   spec = {
     -- import your plugins
     { import = "acek.plugins" },
