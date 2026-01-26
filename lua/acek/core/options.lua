@@ -38,3 +38,5 @@ opt.clipboard:append("unnamedplus")
 -- Panes
 opt.splitright = true -- Split window to the right
 opt.splitbelow = true -- Split window to the bottom
+
+vim.cmd("syntax on")

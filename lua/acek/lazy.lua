@@ -1,3 +1,5 @@
+-- lua/acek/lazy.lua
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -22,6 +24,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.opt.textwidth = 80
 vim.opt_local.colorcolumn = "80"
+
+-- CRITICAL FIX: Enable filetype detection BEFORE setting up lazy.nvim
+vim.cmd("filetype plugin indent on")
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
