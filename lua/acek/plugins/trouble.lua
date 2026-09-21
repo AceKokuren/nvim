@@ -1,6 +1,8 @@
 return {
 "folke/trouble.nvim",
+
   opts = {
+    auto_preview = false,
     focus = true,
     auto_jump = true,
     preview = {
@@ -15,6 +17,7 @@ return {
     warn_no_results = false,
     open_no_results = true,
   }, -- for default options, refer to the configuration section for custom setup.
+
   cmd = "Trouble",
   keys = {
     {
@@ -48,5 +51,4 @@ return {
       desc = "Quickfix List (Trouble)",
     },
   },
-
 }

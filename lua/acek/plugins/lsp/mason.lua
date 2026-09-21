@@ -1,32 +1,40 @@
 return {
-    "mason-org/mason.nvim",
-    dependencies = {
-        "mason-org/mason-lspconfig.nvim",
-    },
+  "williamboman/mason.nvim",
+  dependencies = {
+    "williamboman/mason-lspconfig.nvim",
+  },
+  config = function()
+    -- import mason
+    local mason = require("mason")
 
-    config = function()
-        local mason_lspconfig = require("mason-lspconfig")
+    -- import mason-lspconfig
+    local mason_lspconfig = require("mason-lspconfig")
 
-        require("mason").setup({
-            ui = {
-                icons = {
-                    package_installed = "✓",
-                    package_pending = "➜",
-                    package_uninstalled = "✗"
-                }
-            }
-        })
+    -- enable mason and configure icons
+    mason.setup({
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
+        },
+      },
+    })
 
-        mason_lspconfig.setup({
-            ensure_installed = {
-                "lua_ls",
-                "jdtls",
-                "cssls",
-                "emmet_ls",
-                "html",
-                "lemminx",
-
-            }
-        })
-    end,
+    mason_lspconfig.setup({
+      -- list of servers for mason to install
+      ensure_installed = {
+        "ts_ls",
+        "html",
+        "cssls",
+        "tailwindcss",
+        "svelte",
+        "lua_ls",
+        "graphql",
+        "emmet_ls",
+        "prismals",
+        "pyright",
+      },
+    })
+  end,
 }
