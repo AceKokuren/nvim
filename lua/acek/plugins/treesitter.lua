@@ -32,7 +32,6 @@ return {
         "dockerfile",
         "gitignore",
         "vimdoc",
-        "java",
         "xml",
       }),
 
